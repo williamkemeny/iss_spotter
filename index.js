@@ -13,6 +13,6 @@ fetchMyIP((error, ip) => {
       return;
     }
 
-    console.log("It worked! Returned coordinates:", data);
+    console.log("Coordinates:", data);
   });
 });

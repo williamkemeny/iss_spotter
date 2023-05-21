@@ -32,8 +32,8 @@ const fetchCoordsByIP = function (ip, callback) {
     }
     const parsedBody = JSON.parse(body);
     if (!parsedBody.success) {
-      const message = `Success status was ${parsedBody.success}. Server message says: ${parsedBody.message} when fetching for IP ${parsedBody.ip}`;
-      callback(Error(message), null);
+      const errorMessage = `Success status was ${parsedBody.success}. Server message says: ${parsedBody.message} when fetching for IP ${parsedBody.ip}`;
+      callback(errorMessage, null);
       return;
     }
 
